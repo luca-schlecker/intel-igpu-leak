@@ -9,6 +9,6 @@ add_executable(intel-iGPU-leak
 )
 
 find_package(glfw3 CONFIG REQUIRED)
-find_package(glad CONFIG REQUIRED)
+find_package(GLEW CONFIG REQUIRED)
 
-target_link_libraries(intel-iGPU-leak PRIVATE glfw glad::glad)
+target_link_libraries(intel-iGPU-leak PRIVATE glfw GLEW::GLEW)

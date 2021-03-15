@@ -1,6 +1,6 @@
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
-#include <glad/glad.h>
+#include <gl/glew.h>
 
 void draw() {
   glClearColor(1, 0, 0, 1);
@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 
   glfwMakeContextCurrent(win);
 
-  gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+  glewInit();
 
   glfwSetWindowSizeCallback(win, [](GLFWwindow* window, int width, int height) {
     draw();
