@@ -7,6 +7,8 @@ This is a sample project demonstrating the memory leak reported [here](https://w
 Some Intel iGPU's in combination with OpenGL lead to leaked memory if the window is resized and redrawn.
 Specifically, I think the first OpenGL-Draw-Command after the window being resized is responsible for the memory leak.
 
+The memory usage of the program rises to about 700mb for me and it doesn't get freed for as long as the program is running. It eventually settles at 500mb, if not resized for a while.
+
 This behavior is confirmed with [Krita](https://krita.org/) (with OpenGL rendering enabled), [Qt](https://www.qt.io/) applications using OpenGL, and OpenGL programs using something like [GLFW](https://www.glfw.org/) or [SDL](http://www.libsdl.org/).
 I've tried multiple combinations of [SDL](http://www.libsdl.org/), [GLFW](https://www.glfw.org/), [GLEW](http://glew.sourceforge.net/), and [GLAD](https://github.com/Dav1dde/glad). All lead to the same leak for my machine.
 
