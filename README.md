@@ -10,7 +10,7 @@ Specifically, I think the first OpenGL-Draw-Command after the window being resiz
 This behavior is confirmed with Krita (with OpenGL rendering enabled), Qt applications using OpenGL, and OpenGL programs using something like GLFW or SDL.
 I've tried multiple combinations of SDL, GLFW, GLEW, and GLAD. All lead to the same leak for my machine.
 
-Seems like a problem only occuring on Windows.
+It seems like a problem only occuring on Windows.
 
 ## Results
 
@@ -37,7 +37,7 @@ Arch Linux:
 sudo pacman -S glfw glew
 ```
 
-Using [vcpkg](https://github.com/microsoft/vcpkg) (Useful for Windows):
+Using [vcpkg](https://github.com/microsoft/vcpkg) (Useful on Windows):
 ```powershell
 ./vcpkg.exe install glew glfw3
 ```
