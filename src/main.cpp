@@ -1,6 +1,6 @@
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
-#include <gl/glew.h>
+#include <GL/glew.h>
 
 void draw() {
   glClearColor(1, 0, 0, 1);

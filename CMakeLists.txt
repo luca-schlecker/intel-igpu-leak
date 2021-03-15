@@ -8,7 +8,8 @@ add_executable(intel-iGPU-leak
   src/main.cpp
 )
 
-find_package(glfw3 CONFIG REQUIRED)
-find_package(GLEW CONFIG REQUIRED)
+find_package(glfw3 REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(OpenGL REQUIRED)
 
-target_link_libraries(intel-iGPU-leak PRIVATE glfw GLEW::GLEW)
+target_link_libraries(intel-iGPU-leak PRIVATE glfw OpenGL::OpenGL GLEW::GLEW)
