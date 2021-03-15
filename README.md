@@ -57,8 +57,8 @@ The resulting executable is located in `build/`.
 
 ## Testing
 
-- Track the memory usage of this program.
-- The baseline should be at around 30mb (may differ a bit).
-- Resize the window (not the cmd window if one gets opened).
-- Observe the memory usage rising if your iGPU is affected.
-- Please open an issue with your test results and your information.
+- Start the resulting executable. (But don't resize it yet)
+- Track the memory usage of this program. (It should be at around 30mb)
+- Resize the window. (not the cmd window if one gets opened)
+- Observe the memory usage rising if your iGPU is affected. (For me it rises to around 700mb)
+- Please open an issue with your test result and your system information. (For both positive and negative results)
