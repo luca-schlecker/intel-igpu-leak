@@ -10,19 +10,21 @@ Specifically, I think the first OpenGL-Draw-Command after the window being resiz
 This behavior is confirmed with Krita (with OpenGL rendering enabled), Qt applications using OpenGL, and OpenGL programs using something like GLFW or SDL.
 I've tried multiple combinations of SDL, GLFW, GLEW, and GLAD. All lead to the same leak for my machine.
 
+Seems like a problem only occuring on Windows.
+
 ## Results
 
 ### This behavior is confirmed for the following iGPU's
-| iGPU | Driver version |
-|:-----|:---------------|
-| Intel UHD 620 | 30.0.100.9360 |
-| Intel Iris Xe | 27.20.100.8935 |
+| iGPU | Driver version | Operating System |
+|:-----|:---------------|:-----------------|
+| Intel UHD 620 | 30.0.100.9360 | Windows 10 |
+| Intel Iris Xe | 27.20.100.8935 | Windows 10 |
 
 ### This behavior does not occur with the following (i)GPU's
-| (i)GPU | Driver version |
-|:-----|:---------------|
-| NVIDIA GeForce GTX 1060 | 27.21.14.5671 |
-| Intel HD Graphics (Cherry Trail) | 20.19.15.4549 |
+| (i)GPU | Driver version | Operating System |
+|:-----|:---------------|:-------------------|
+| NVIDIA GeForce GTX 1060 | 27.21.14.5671 | Windows 10 |
+| Intel HD Graphics (Cherry Trail) | 20.19.15.4549 | Windows 10 |
 
 ## Building
 
