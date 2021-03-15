@@ -10,6 +10,10 @@ add_executable(intel-iGPU-leak
 
 find_package(glfw3 REQUIRED)
 find_package(GLEW REQUIRED)
-find_package(OpenGL REQUIRED)
 
-target_link_libraries(intel-iGPU-leak PRIVATE glfw OpenGL::OpenGL GLEW::GLEW)
+if(UNIX)
+  find_package(OpenGL REQUIRED)
+  target_link_libraries(intel-iGPU-leak PRIVATE OpenGL::OpenGL)
+endif()
+
+target_link_libraries(intel-iGPU-leak PRIVATE glfw GLEW::GLEW)
