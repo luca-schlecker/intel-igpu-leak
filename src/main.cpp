@@ -10,7 +10,7 @@ void draw() {
 int main(int argc, char** argv) {
   glfwInit();
 
-  auto win = glfwCreateWindow(1280, 720, "title", nullptr, nullptr);
+  auto win = glfwCreateWindow(1280, 720, "Intel iGPU Leak", nullptr, nullptr);
 
   glfwMakeContextCurrent(win);
 
